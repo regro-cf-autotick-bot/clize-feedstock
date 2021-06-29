@@ -1,18 +1,18 @@
 {% set name = "clize" %}
-{% set version = "4.1.1" %}
+{% set version = "4.2.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: f54dedcf6fea90a3e75c30cb65e0ab1e832760121f393b8d68edd711dbaf7187
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: df573bc23d06ac9c94e308ed4c86332a682580f4f5f4d5cf3600c40c4d3ce41a
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -36,7 +36,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: "Turn functions into command-line interfaces"
+  summary: Turn functions into command-line interfaces
   dev_url: https://github.com/epsy/clize
   doc_url: https://clize.readthedocs.io/en/stable/
 
