@@ -17,12 +17,12 @@ build:
 requirements:
   host:
     - pip
-    - python >=2.7
+    - python >=3.6
   run:
     - attrs >=19.1.0
     - docutils >=0.17.0
     - od
-    - python >=2.7
+    - python >=3.6
     - sigtools >=4.0.1
 
 test:
